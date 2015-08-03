@@ -1,8 +1,46 @@
 .resume{
-  .title{
-    padding: 1em;
-    h2,h3{
+
+  header{
+    .title{
+      h1{
+        font-size: 38px;
+        margin: 0;
+        small{
+          display: block;
+          font-size: .5em;
+          color: #055D89;
+        }
+      }
+    }
+
+    address{
+      font-style: normal;
+      float: right;
+      ul{
+        list-style: none;
+        a{
+          color: #333;
+          &:hover{
+
+          }
+        }
+      }
+    }
+  }
+
+  .section{
+    padding-top: 1em;
+    h2{
+      border-bottom: 2px dotted #d5d5d5;
+    }
+    ul{
+      list-style: none;
       margin: 0;
+      li {
+        h3 > .time{
+          float: right;
+        }
+      }
     }
   }
 }

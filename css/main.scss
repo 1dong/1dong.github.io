@@ -53,7 +53,9 @@ $nav-link-color: #666;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css",
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "resume"
 ;
