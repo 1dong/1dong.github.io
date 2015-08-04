@@ -7,5 +7,9 @@ url: "http://1dong.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+
+timezone: China/beijing
+
 # Build settings
 markdown: kramdown
+
