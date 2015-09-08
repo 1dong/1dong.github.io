@@ -36,6 +36,10 @@ $contain-padding: 20px;
 $nav-link-color: #666;
 
 
+//resume
+$section-title: #3264B4;
+
+
 // Using media queries with like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -53,7 +57,7 @@ $nav-link-color: #666;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css",
+        "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css",
         "base",
         "layout",
         "syntax-highlighting",
