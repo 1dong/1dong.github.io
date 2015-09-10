@@ -109,79 +109,56 @@ Jsonp.prototype.fnSelectContent = function(ev){
   }
 };
 
+
+//apple menu
+//
+function getPos(obj){
+  var l=0,t=0;
+
+  while(obj)
+  {
+    l+=obj.offsetLeft;
+    t+=obj.offsetTop;
+
+    obj=obj.offsetParent;
+  }
+
+  return {left: l, top: t};
+}
+
+function MenuEffect(id){
+  this.oMenu = document.querySelector(id);
+  this.aMenuItem = document.querySelectorAll(id + " img");
+  var _this = this;
+
+
+  document.onmousemove = function (ev){
+    console.log(ev.clientX, ev.clientY, _this.aMenuItem, document.querySelector(".container").offsetLeft );
+    for(var i=0;i<_this.aMenuItem.length;i++){
+      var l=getPos(_this.aMenuItem[i]).left+_this.aMenuItem[i].offsetWidth/2;
+      var t=getPos(_this.aMenuItem[i]).top+_this.aMenuItem[i].offsetHeight/2;
+
+      var a=l-ev.clientX;
+      var b=t-ev.clientY;
+
+      console.log(i, l, t, ev.clientX, ev.clientY, a, b);
+      var dis=Math.sqrt(a*a+b*b);
+
+      console.log(dis)
+      var scale=1-dis/300;
+
+      if(scale<0.5) scale=0.5;
+
+      console.log(scale);
+      _this.aMenuItem[i].width=128*scale;
+    }
+  };
+}
+
 window.onload=function (){
 
   var jsonp = new Jsonp("#jsonp");
 
-  // var oTxt=document.getElementById('txt1');
-  // var oUl=document.getElementById('ul1');
-  // var aLi=oUl.children;
-  // oTxt.focus();
-  // var iNow=-1;
-  // var oldTxt='';
-  // oTxt.onkeyup=function(ev){
-  //   var oEvent=ev || event;
-  //   if(oEvent.keyCode==38 || oEvent.keyCode==40){
-  //     return;
-  //   }
-  //   oldTxt=this.value;
-  //   jsonp('http://suggestion.baidu.com/su',{wd:this.value},function(json){
-  //     oUl.innerHTML='';
-  //     oUl.style.display='block';
-  //     for(var i=0; i<json.length; i++){
-  //       var oLi=document.createElement('li');
-  //       oLi.innerHTML=json[i];
-  //       oUl.appendChild(oLi);
-  //     }
-  //     //给li加事件
-  //     for(var i=0; i<aLi.length; i++){
-  //       (function(index){
-  //         aLi[i].onmouseover=function(){
-  //           iNow=index;
-  //           for(var i=0; i<aLi.length; i++){
-  //             aLi[i].className='';
-  //           }
-  //           this.className='active';
-  //         }
-  //       })(i);
-  //       aLi[i].onmouseout=function(){
-  //         this.className='';
-  //       }
-  //       aLi[i].onclick=function(){
-  //         var url='http://www.baidu.com/s?wd='+this.innerHTML;
-  //         window.open(url,'_self');
-  //       }
-  //     }
-  //   });
-  // }
+  new MenuEffect("#apple-menu");
 
-  // oTxt.onkeydown=function(ev){
-  //   var oEvent=ev || event;
-  //   switch(oEvent.keyCode){
-  //     case 38:
-  //       iNow--;
-  //       if(iNow==-2){
-  //         iNow=aLi.length-1;
-  //       }
-  //       break;
-  //     case 40:
-  //       iNow++;
-  //       if(iNow==aLi.length){
-  //         iNow=-1;
-  //       }
-  //       break
-  //   }
-  //   for(var i=0; i<aLi.length; i++){
-  //     aLi[i].className='';
-  //   }
-  //   if(iNow==-1){
-  //     oTxt.value=oldTxt;
-  //   }else if(iNow>-1){
-  //     aLi[iNow].className='active';
-  //     oTxt.value=aLi[iNow].innerHTML;
-  //   }
-  //   if(oEvent.keyCode==38 || oEvent.keyCode==40){
-  //     return false;
-  //   }
-  // }
 };
