@@ -1,0 +1,13 @@
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font: 14px/1.231 "Microsoft Yahei","ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB",Tahoma,HELVETICA,Arial,sans-serif;
+  color: #393B3F;
+  background-color: #F0F0F0;
+}
+

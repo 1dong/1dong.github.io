@@ -1,0 +1,189 @@
+.nHomeInfo{
+  width: 1000px;
+  height: 256px;
+  border: #DFDFDF 1px solid;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.nHomeInfo ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nHomeInfo .tab{
+  width: 248px;
+  height: 258px;
+  float: left;
+  overflow: hidden;
+}
+
+.nHomeInfo .tab li{
+  background-color: #fcfcfc;
+  border-bottom: #dfdfdf 1px solid;
+  height: 52px;
+  padding: 17px 20px 17px 85px;
+  position: relative;
+}
+
+.nHomeInfo .tab li.current{
+  background-color: #FFF;
+}
+
+.nHomeInfo .tab li em{
+  display: inline-block;
+  width: 30px;
+  height: 24px;
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  background-image: url('../../images/index/icon01.png');
+  background-size: 100px 45px;
+}
+
+.nHomeInfo .tab li p{
+  line-height: 26px;
+  height: 26px;
+}
+
+.nHomeInfo .tab li em.us{
+  background-position: -35px 0px;
+}
+
+.nHomeInfo .tab li em.hk{
+  background-position: 0px 0px;
+}
+
+.nHomeInfo .tab li em.cn{
+  background-position: -70px 0px;
+}
+
+
+.nHomeInfo .tab li .tab-title{
+  width: 100%;
+}
+
+.nHomeInfo .tab li .tab-title .p01{
+  font-size: 16px;
+  color: #393B3F;
+}
+
+.nHomeInfo .tab li .tab-title .p02{
+  font-size: 18px;
+}
+
+.nHomeInfo .tab li .change{
+  position: absolute;
+  right: 20px;
+  top: 17px;
+}
+
+.nHomeInfo .tab li .change p{
+  font-size: 12px;
+  text-align: right;
+}
+
+.nHomeInfo .tab li .up{
+  color: #FF4242;
+}
+
+.nHomeInfo .tab li .down{
+  color: #129900;
+}
+
+.nHomeInfo .view{
+  width: 750px;
+  height: 258px;
+  float: right;
+  background-color: #FFF;
+}
+
+.nHomeInfo .view li{
+  float: left;
+  width: 249px;
+  height: 258px;
+  border-left: #DFDFDF 1px solid;
+}
+
+.nHomeInfo .view li a{
+  color: #393B3F;
+  text-decoration: none;
+  display: block;
+  padding: 9px 9px 5px 9px;
+  height: 232px;
+}
+
+.nHomeInfo .view li .name{
+  height: 17px;
+  line-height: 17px;
+  margin-bottom: 9px;
+  padding-top: 6px;
+}
+
+.nHomeInfo .view li .name .span01{
+  font-size: 16px;
+}
+
+.nHomeInfo .view li .name .span02{
+  font-size: 14px;
+}
+
+.nHomeInfo .view li .price{
+  height: 22px;
+  line-height: 20px;
+  margin-bottom: 17px;
+  position: relative;
+}
+
+.nHomeInfo .view li .price .span01{
+  font-size: 18px;
+}
+
+.nHomeInfo .view li .price .span01 i{
+  display: inline-block;
+  width: 17px;
+  height: 19px;
+  background-image: url('../../images/index/icon01.png');
+  background-size: 100px 45px;
+  background-repeat: no-repeat;
+  margin-left: 2px;
+
+}
+
+.nHomeInfo .view li .price.up .span01 i{
+  background-position:0 -25px;
+}
+
+.nHomeInfo .view li .price.down .span01 i{
+  background-position:-17px -25px;
+}
+
+.nHomeInfo .view li .price .span02{
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+}
+
+.nHomeInfo .view li .flash{
+  height: 136px;
+}
+
+.nHomeInfo .view li .tips{
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  margin-top: 9px;
+  overflow: hidden;
+}
+
+.nHomeInfo .view li .flat{
+  color: #A5A9AF;
+}
+
+.nHomeInfo .view li .up{
+  color: #FF4242;
+}
+
+.nHomeInfo .view li .down{
+  color: #129900;
+}
