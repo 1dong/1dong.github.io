@@ -34,7 +34,19 @@
       color: $section-title;
       border-bottom: 2px dotted #d5d5d5;
     }
-    ul{
+    .skills{
+      @extend %clearfix;
+      .skills-category{
+        width: 45%;
+        float: left;
+        &:nth-of-type(2n+1){
+          margin-right: 5%;
+          clear: left;
+        }
+      }
+    }
+
+    > ul{
       list-style: none;
       margin: 0;
       li {
@@ -54,7 +66,7 @@
 
       &.skills{
         @extend %clearfix;
-        li{
+        >ul > li{
           width: 45%;
           float: left;
           &:nth-of-type(2n+1){
@@ -64,7 +76,7 @@
         }
 
         @include media-query($on-laptop) {
-          li{
+          >ul > li, .skills-category{
             width: 100%;
             float: none;
             &:nth-of-type(2n+1){
@@ -156,6 +168,17 @@
 
   p{
     font-size: 12px !important;
+  }
+
+  .section{
+    &:nth-of-type(1){
+      padding-top: 1em !important ;
+    }
+    padding-top: 0 !important;
+  }
+
+  .container{
+    padding-top: 0px !important;
   }
 
 }
